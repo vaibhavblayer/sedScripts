@@ -1,0 +1,9 @@
+BEGIN{
+	print "\\begin{minted}[tabsize=4]{python}"  
+}
+(NR>1){
+	print $0 
+}
+END{
+	print "\\end{minted}" 
+}

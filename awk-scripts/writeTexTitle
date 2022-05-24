@@ -1,0 +1,9 @@
+BEGIN{
+	print "\\begin{center}\n \\texttt{"
+}
+ (NR==1) { gsub("[#]", "", $1);
+			print $0
+}
+END{
+	print "} \n \\end{center}"
+}

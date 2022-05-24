@@ -1,0 +1,9 @@
+BEGIN{
+	print "\\begin{center}\n\\texttt{Output}\n\\end{center}\n\\begin{itemize}"  
+}
+{
+	print "\\item\\texttt{", $0, "}" 
+}
+END{
+	print "\\end{itemize}" 
+}

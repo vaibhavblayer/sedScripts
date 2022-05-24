@@ -1,0 +1,4 @@
+{
+	print;
+	system("sleep 0.01")
+}

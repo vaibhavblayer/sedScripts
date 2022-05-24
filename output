@@ -1,0 +1,12 @@
+BEGIN{
+	print "\\begin{center}\n\\texttt{Output}\n\\end{center}\n\\begin{itemize}"  
+	}
+(NR == 1){ gsub("[0-9]*", "", $1);
+	print "\\item[$]\\texttt{" $0 "}" 
+		}
+(NR > 1){
+		print "\\item\\texttt{" $0 "}"
+		}
+END{
+	print "\\end{itemize}" 
+}
